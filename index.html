@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Documentation | Php Password/Pattern Protect</title>
+
+<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css">
+
+
+<script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+
+<style type="text/css">
+*{
+        box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+    /* Custom Styles */
+    ul.nav-tabs li{
+        margin: 0;
+        border: none;
+        list-style: none;
+        padding: 0;
+    }
+    ul.nav-tabs ul{
+        padding: 0;
+    }
+    
+    ul.nav-tabs li > a{
+        margin: 0;
+        padding: 8px 16px;
+        color: #e0dfdb;
+        border: none;
+        display: block;
+    }
+
+    ul.nav-tabs ul li a{
+        display: block;
+        padding: 6px 0;
+        padding-left: 25px;
+        font-size: 12px;
+    }
+    
+  .caret-right {
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid;
+    display: inline-block;
+    height: 0;
+    vertical-align: center;
+    width: 0;
+    margin-right: 4px;
+}
+
+    ul.nav-tabs > li.active > a, ul.nav-tabs > li.active > a:hover{
+        color: #fff;
+        background: #60a1b2;
+        border: none;
+        -webkit-box-shadow:inset 0 0 4px 0 rgba(0,0,0,0.4);
+        box-shadow:inset 0 0 4px 0 rgba(0,0,0,0.4);
+    }
+    ul.nav-tabs > li > a:hover, ul.nav-tabs ul li a:hover, ul.nav-tabs ul li.active a{
+        color: #fff;
+        background: #172025;
+        text-decoration: none;
+    }
+    .nav-tabs > li > a{
+        border-radius: 0;
+    }
+
+.blockleft{
+    float: left;
+    width: 230px;
+    height: 100%;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background:#212b30;
+}
+
+.blockleft > ul{
+    padding-bottom: 50px;
+}
+    .blockright{
+        float: left;
+        width: 100%;
+        padding-left: 230px;
+    }
+    .wrapper{
+        float: left;
+        width: 90%;
+        max-width: 960px;
+  }
+  #start{
+    float: left;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 50px;
+    background: #60a1b2;
+    color: #fff;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  }
+  #start h1{
+    float: left;
+  }
+  .block{
+    float: left;
+    clear: both;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    max-width: 960px;
+  }
+  hr{
+    float: left;
+    width: 100%;
+    clear: both;
+  }
+
+  @media (max-width: 767px) {
+    .blockright{
+        padding: 0;
+    }
+    .blockleft{
+        display: none;
+    }
+    #start h1{
+    }
+  }
+</style>
+</head>
+<body data-spy="scroll" data-target=".blockleft">
+
+    <div class="blockleft">
+            
+            <div class="text-center">
+                <h1 style="font-size:20px; color:white">Php Password/Pattern Protect</h1> 
+                <h1 style="font-size:40px; color:lightblue">AuthX</h1> 
+            </div>
+            <ul class="nav nav-tabs nav-stacked clear">
+                <li class="active"><a href="#start">Start</a></li>
+                <li><a href="#install">Installation</a></li>
+                <li><a href="#migration">Migration</a>
+                <li><a href="#protectpages">How to protect pages</a>
+                <li><a href="#redirecturl">Redirecting url's</a></li>
+                 <li><a href="#changepass">Change Password</a></li>
+                <li><a href="#changepast">Change Pattern</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+            
+            </ul>
+    </div>
+
+        <div class="blockright">
+
+            <div id="start">
+                <h1 class="lead">Php Password/Pattern Protect<b style="font-size:24px;">AuthX</b></h1>
+
+                <address class="pull-right small">
+                    created: 23/11/2018<br>
+                    by: Adams Paul Ohiani<br>
+                    email: adamsohiani@gmail.com<br>
+                    
+                </address>
+            </div>
+<section class="block">
+                    <p>
+                    Thank you for purchasing <strong>Php Password/Pattern Protect.</strong>
+                    <p>Thanks again</p> 
+                    </p>
+
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+</section>
+    <hr>
+<section class="block" id="install">
+
+            <h2>Installation</h2>
+            <p><strong></strong>Copy all files contained in “source” folder to your web space via FTP (Upload to any directory).
+            </p>
+            <p>Now login to your phpmyadmin, create a new database and import <b>database.sql</b> to newly created database.
+                </p>
+            <p>Open <b>configurations.php</b> file located in [Php Password/Pattern Protect \ application] with any text editor</p>
+            <p> &nbsp; &nbsp;<b> - </b> Change database configurations like host, database name, database user name and password
+                </p>
+            <p> &nbsp; &nbsp;<b> - </b> Replace ['base_url' => 'http://127.0.0.1/phplogin'] with Php Password/Pattern Protect url. Like ['base_url' => 'http://example.com/Php Password/Pattern Protect'] &nbsp; &nbsp; &nbsp; &nbsp; on line 44
+                </p>
+            <p> &nbsp; &nbsp;<b> - </b> If you don't want new users to signup then replace ['allow_signup' => true,] with ['allow_signup' => false,] on line 80
+                </p>
+            <p> &nbsp; &nbsp;<b> - </b> If you don't want users to change their password ['change_pass' => true,] with ['change_pass' => false,] on line 76
+            </p>
+
+            <p> Navigate with your browser to Php Password/Pattern Protect url - [e.g http://example.com/phplogin/login.php]</br>
+            </p>
+
+
+                <img class="img-responsive" src="assets/images/4.png"><br>
+       <img class="img-responsive" src="assets/images/3.png"><br>
+       <img class="img-responsive" src="assets/images/2.png"><br>
+                log in as: 
+                <ul>
+                  <li><strong>username:</strong> Admin</li>
+                   <li><strong>email:</strong> admin@mail.com</li>
+                    <li><strong>password:</strong> qwerty</li>
+   <li><strong>pattern:</strong><img class="img-responsive" src="assets/images/1.png"> </li>   
+                </ul>
+
+                <p>That’s all</p>
+</section>
+    <hr>
+
+
+        <section class="block" id="migration">
+            <h2>Migration</h2>
+            <p>If you are moving the script already installed and configured in a new location (from local to server, from server to local, or in a different directory) remember to change <code>&lt;?php require_once("Php Password/Pattern Protect/application/session.php"); ?></code> according to new location</p>
+        </section>
+
+<section class="block" id="protectpages">
+            <h2>How to protect pages</h2>
+            <p><strong></strong>Add this single line at the top of the page to protect it with login <code>&lt;?php require_once("application/session.php"); ?></code><strong><p>Note: web page extension must be .php</strong> </p>
+            <pre>
+&lt;?php require_once("application/session.php"); ?>
+
+and page begins here
+</pre>
+<br>
+
+
+</section>
+
+    <hr>
+<section class="block" id="redirecturl">
+            <h2>Redirecting url's</h2>
+            
+            <p>If the user goes to protected page and is not logged in, then he/she will be redirected to login page and after successfull login he/she will be redirected back to same protected page.</p>
+            </p>
+            
+            <p>If you want to redirect user to custom URL then <code>login.php?return=YOUR CUSTOM URL</code>
+                if another website then must include http:// or https:// <code>login.php?return=https://fb.com</code>
+            </p>
+
+</section>
+
+<hr>
+<section class="block" id="changepass">
+            <h2>Change Password</h2>
+            <p>Logged in users can change their passwords by going to <code>http://example.com / script folder / changepass.php</code></p>
+            <p>If you don't want to allow users to change pasword then</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Open configuration.php file in any text editor and replace <code>'change_pass' => true,</code> with <code>'change_pass' => false,</code> on line 76</p>
+
+</section>
+        <hr>
+
+<section class="block" id="changepat">
+            <h2>Change Pattern</h2>
+            <p>Logged in users can change their passwords by going to <code>http://example.com / script folder / changepat.php</code></p>
+          
+</section>
+<hr>
+
+<section class="block" id="signup">
+            <h2>Sign up</h2>
+            <p>Sign up process is simple without email confirmation</p>
+
+             
+</section>
+    <hr>
+<section class="block" id="customization">
+     
+            <h3>Home Page</h3>
+            <p>Homepage is web page you are redirected to after login</p>
+            <p>Protect home page by adding code line given above <p>
+            <p>Remember to add logout <code>http://example.com / Php Password/Pattern Protect / application / logout.php?logout=true</code> and change password <code>http://example.com / Php Password/Pattern Protect / changepass.php</code> links in it if you allow it
+            </p>
+            <p>Change homepage by changing line 55 in configurations.php</p>
+            <h3>Logout redirect</h3>
+            <p>You can also change page where to redirect user after successfull logout | change <code>'redirect_logout' => 'index.php',</code> in configurations.php line 72 <br>
+
+
+</section>
+    <hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</section>
+        </div>
+    </div>
+
+<script>
+  !function ($) {
+    $(function(){
+      window.prettyPrint && prettyPrint()   
+    })
+  }(window.jQuery)
+</script>
+</body>
+</html>                                   
